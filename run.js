@@ -1,7 +1,7 @@
 #!/usr/bin/jjs -fv
 
 var baseName = "hero-command";
-var startHeroCommand = "kubectl get deployment -l name=" + baseName + ",version!=" + $ENV.VERSION;
+var startHeroCommand = "kubectl delete deployment -l name=" + baseName + ",version!=" + $ENV.VERSION;
 $EXEC(startHeroCommand);
 print($OUT);
 print($ERR);
